@@ -5,11 +5,9 @@ export default async function decorate(block) {
     const ulEl = document.createElement("ul");
     json.data.forEach(element => {
         console.log(element);
-        if (element.path.includes("/magazine")) {
             const liEl = document.createElement("li");
             liEl.innerText = element.title;
             ulEl.appendChild(liEl);
-        }
 
     });
     block.appendChild(ulEl);
